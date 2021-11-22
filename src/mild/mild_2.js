@@ -26,9 +26,8 @@ export function identifyVariable(variable) {
  */
 export function identifyArray(array) {
    let typesArray = [];
-   let varType = '';
    for(let i = 0; i < array.length; i++){
-      var identified = {type: typeof array[i], value: variable};
+      var identified = {type: typeof array[i], value: array[i]};
       typesArray[i] = identified;
    }
    return typesArray;
@@ -98,5 +97,9 @@ export function removeKeyNonDestructive(object, key) {
  * @return {*} The object with its keys removed.
  */
 export function removeKeys(object, keyList) {
-
+   var newObject = {...object};
+   for(let i = 0; i < keyList.length; i++){
+      delete newObject[keyList[i]];
+   }
+   return newObject;
 }
