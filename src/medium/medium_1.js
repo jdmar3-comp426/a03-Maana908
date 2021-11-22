@@ -38,8 +38,6 @@ export function getMedian(array) {
     return median;
 }
 
-import {variance} from "./stats_helpers";
-
 /**
  * Calculates statistics (see below) on an array of numbers.
  * Look at the stats_helper.js file. It does variance which is used to calculate std deviation.
