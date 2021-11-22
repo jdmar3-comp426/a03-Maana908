@@ -6,7 +6,33 @@
  * returns: { type: 'number', value: 4 }
  */
 export function identifyVariable(variable) {
-
+   let varType = '';
+   if(typeof variable === 'undefined'){
+      varType === 'undefined';
+   } 
+   if(typeof variable === 'object'){
+      varType === 'object';
+   }
+   if(typeof variable === 'boolean'){
+      varType === 'boolean';
+   }
+   if(typeof variable === 'number'){
+      varType === 'number';
+   }
+   if(typeof variable === 'string'){
+      varType === 'string';
+   }
+   if(typeof variable === 'function'){
+      varType === 'function';
+   }
+   if(typeof variable === 'symbol'){
+      varType === 'symbol';
+   }
+   if(typeof variable === 'bigint'){
+      varType === 'bigint';
+   }
+   var identified = {type: varType, value: variable};
+   return identified;
 }
 
 
