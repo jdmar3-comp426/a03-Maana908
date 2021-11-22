@@ -6,32 +6,7 @@
  * returns: { type: 'number', value: 4 }
  */
 export function identifyVariable(variable) {
-   let varType = '';
-   if(typeof variable === 'undefined'){
-      varType === 'undefined';
-   } 
-   if(typeof variable === 'object'){
-      varType === 'object';
-   }
-   if(typeof variable === 'boolean'){
-      varType === 'boolean';
-   }
-   if(typeof variable === 'number'){
-      varType === 'number';
-   }
-   if(typeof variable === 'string'){
-      varType === 'string';
-   }
-   if(typeof variable === 'function'){
-      varType === 'function';
-   }
-   if(typeof variable === 'symbol'){
-      varType === 'symbol';
-   }
-   if(typeof variable === 'bigint'){
-      varType === 'bigint';
-   }
-   var identified = {type: varType, value: variable};
+   var identified = {type: typeof variable, value: variable};
    return identified;
 }
 
@@ -53,32 +28,8 @@ export function identifyArray(array) {
    let typesArray = [];
    let varType = '';
    for(let i = 0; i < array.length; i++){
-      if(typeof variable === 'undefined'){
-         varType === 'undefined';
-      } 
-      if(typeof variable === 'object'){
-         varType === 'object';
-      }
-      if(typeof variable === 'boolean'){
-         varType === 'boolean';
-      }
-      if(typeof variable === 'number'){
-         varType === 'number';
-      }
-      if(typeof variable === 'string'){
-         varType === 'string';
-      }
-      if(typeof variable === 'function'){
-         varType === 'function';
-      }
-      if(typeof variable === 'symbol'){
-         varType === 'symbol';
-      }
-      if(typeof variable === 'bigint'){
-         varType === 'bigint';
-      }
-      var identified = {type: varType, value: variable};
-      array[i] = identified;
+      var identified = {type: typeof array[i], value: variable};
+      typesArray[i] = identified;
    }
    return typesArray;
 }
@@ -120,7 +71,7 @@ export function removeKey(object, key) {
  If only `removeKeyNonDestructive` was called, nothing would have changed.
  */
 export function removeKeyNonDestructive(object, key) {
-   var newObject = object;
+   var newObject = {...object};
    delete newObject[key];
    return newObject;
 }
