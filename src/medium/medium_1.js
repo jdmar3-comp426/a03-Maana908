@@ -38,6 +38,8 @@ export function getMedian(array) {
     return median;
 }
 
+import {variance} from "./stats_helpers";
+
 /**
  * Calculates statistics (see below) on an array of numbers.
  * Look at the stats_helper.js file. It does variance which is used to calculate std deviation.
@@ -62,5 +64,6 @@ export function getStatistics(array) {
     let maxNum = Math.max(...array);
     let meanNum = getSum(array)/array.length;
     var stats = {length: array.length, sum: getSum(array), mean: meanNum, median: getMedian(array), min: minNum, max: maxNum, variance: variance(array, meanNum), standard_deviation: Math.sqrt(variance(array, meanNum))};
+    return stats;
 }
 
