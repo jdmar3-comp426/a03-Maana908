@@ -49,7 +49,7 @@ export function getIncreasingArray(startNumber, endNumber) {
 export function maxAndMin(numbers) {
     let minNum = Math.min(...numbers);
     let maxNum = Math.max(...numbers);
-    var stats = {min: minNum, max = maxNum};
+    var stats = {min: minNum, max: maxNum};
     return stats;
 }
 
@@ -65,5 +65,5 @@ export function maxAndMin(numbers) {
  */
 export function countArray(array) {
 
-    
+
 }
