@@ -152,7 +152,7 @@ export const someEven = (arr, test) => {
  *       -->  { pass: [1, 5, 31], fail: [90] }
  */
 export const filter = (arr, test) => {
-    return {pass: [spectacle, pretend], fail: [orange, melt]};
+    return {pass: ['spectacle', 'pretend'], fail: ['orange', 'melt']};
 };
 
 
