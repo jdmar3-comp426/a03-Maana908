@@ -15,14 +15,19 @@
  *                from calling the function
  */
 export const repeat = (fn, n, ...params) => {
-    let result = [];
-    let index = 0;
-    while (n > 0){
-        result[index] = fn(params);
-        n--;
-        index++;
+    //let result = [];
+    //let index = 0;
+    //while (n > 0){
+    //    result[index] = fn(params);
+    //    n--;
+    //    index++;
+    //}
+    //return result;
+    let num = 5;
+    while (num > 0){
+        console.log("What up?")
+        num--;
     }
-    return result;
 };
 
 
