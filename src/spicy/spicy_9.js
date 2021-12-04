@@ -58,9 +58,7 @@ export const multiplyBy = (num1) => {
  * Use the multiplyBy function to create and export a function named
  *   "tenTimes" that multiplies a number by 10.
  */
-export const tenTimes = () => {
-    return multiplyBy(10);
-}
+export const tenTimes = multiplyBy(10);
 
 
 /**
@@ -104,7 +102,7 @@ export const everyEven = (arr, test) => {
     }
     let j = 0;
     while (j < evenArr.length){
-        if(test(evens[j])== false){ return false;}
+        if(test(evenArr[j])== false){ return false;}
         j++;
     }
     return true;
@@ -139,7 +137,7 @@ export const someEven = (arr, test) => {
     }
     let j = 0;
     while (j < evenArr.length){
-        if(test(evens[j])== true){ return true;}
+        if(test(evenArr[j])== true){ return true;}
         j++;
     }
     return false;
@@ -172,7 +170,7 @@ export const filter = (arr, test) => {
     let fail = new Array();
     let i = 0;
     while (i < arr.length){
-        if(test(arr[i] == true)) {pass.push(arr[i]);}
+        if(test(arr[i]) == true) {pass.push(arr[i]);}
         else {fail.push(arr[i]);}
         i++;
     }
@@ -212,5 +210,5 @@ export const isOdd = (num) => {
  *   pass the test. You must use the filter function.
  */
 export const hasExactly = (arr, test, n) => {
-    return filter(arr, test).pass.length == n;
+    return false;
 };
